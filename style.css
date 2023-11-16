@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: white;
+ 
+    
+    
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 32px;
+    color: aliceblue;
+}
+
+
+
+
+
+
+.main {
+    min-height: 100vh;
+    background: url(background.jpg);
+    
+    background-size: cover;
+    background-position: center;
+}
+
+
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_content {
+    
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 78px;
+    font-weight: 700;
+}
+
+.info{
+    text-align: center;
+    
+}
+
+
+.home_content>p {
+    
+    font-size: 16px;
+    font-weight: 700;
+}
+
+button {
+    font-size: 18px;
+    margin: 25px 0px;
+    background-color: blueviolet;
+    height: 60px;
+    width: 200px;
+    border: none;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+     
+    background-color: transparent;
+    color: blueviolet;
+}
