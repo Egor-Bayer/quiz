@@ -121,7 +121,7 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
-.close_btn {
+.smaller_btn {
     font-size: 18px;
     margin: 25px 0px;
     background-color: rgb(226, 43, 180);
@@ -152,4 +152,13 @@ button:hover {
 .click_tip{
     margin-top: 50px;
     font-size: 36px;
+}
+
+.quiz_title{
+    width: 200px;
+}
+
+.quiz_text{
+    display: block;
+    width: 200px;
 }
