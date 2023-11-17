@@ -55,7 +55,7 @@ ul, li {
     top: -1000px;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(54, 54, 54, 0.9);
     width: 100%;
     height: 100vh;
     z-index: 1000;
@@ -147,4 +147,9 @@ button:hover {
 
 .result_title{
     font-size: 40px;
+}
+
+.click_tip{
+    margin-top: 50px;
+    font-size: 36px;
 }

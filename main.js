@@ -31,6 +31,7 @@ updateCount(count)
 max.innerHTML = MAXCOUNT
   function reset() {
     count = 0;
+    givenAnswers = []
     newQuestion();
 }
   function showForm() {
@@ -47,8 +48,10 @@ max.innerHTML = MAXCOUNT
   }
   function hideResult(){
     hiddenForm();
-    resultCon.innerHTML = resultHtml
-    formCon.style.top = null;
+    resultCon.style.top = null;
+    setTimeout(() => {
+      resultCon.innerHTML = resultHtml
+    }, 500) 
   }
   function updateCount(){
     counter.innerHTML = count
@@ -57,6 +60,7 @@ max.innerHTML = MAXCOUNT
   function newQuestion() {
     count++
     if(count>MAXCOUNT){
+      console.log(givenAnswers)
         let html = ""
         let sum = 0;
         givenAnswers.forEach((i) =>{
@@ -70,7 +74,7 @@ max.innerHTML = MAXCOUNT
           html += `<div>${i}) ${str} <div/>`
           i++
         })
-        html += "<div/>"
+        html += '<div class="click_tip">Click anywhere to close<div/><div/>'
         resultCon.innerHTML = html
         showResult();
         return
@@ -83,14 +87,14 @@ max.innerHTML = MAXCOUNT
     updateCount();
     return
   }
-  function answerGiven(optionNumber){
-    console.log(optionNumber)
+  function answerGiven(optionNumber, event){
+    console.log(optionNumber, event)
     givenAnswers.push(correctAnswers[count - 1] == optionNumber)
     newQuestion();
   }
 quizBtn.addEventListener("click", showForm);
 closeBtn.addEventListener("click", hiddenForm);
-
+resultCon.addEventListener("click", hideResult)
 for(let i = 0; i<options.length; i++){
-  options[i].addEventListener("click", answerGiven)
+  options[i].addEventListener("click", answerGiven.bind(null, i))
 }
